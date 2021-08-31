@@ -1,37 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  annotations:
-    meta.helm.sh/release-name: inventory
-    meta.helm.sh/release-namespace: inventory-erik
-  creationTimestamp: "2021-08-31T16:59:37Z"
-  labels:
-    app.kubernetes.io/managed-by: Helm
-  managedFields:
-  - apiVersion: rbac.authorization.k8s.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:meta.helm.sh/release-name: {}
-          f:meta.helm.sh/release-namespace: {}
-        f:labels:
-          .: {}
-          f:app.kubernetes.io/managed-by: {}
-      f:roleRef:
-        f:apiGroup: {}
-        f:kind: {}
-        f:name: {}
-      f:subjects: {}
-    manager: helm
-    operation: Update
-    time: "2021-08-31T16:59:37Z"
   name: default-view
   namespace: inventory-erik-tgt
-  resourceVersion: "50016330"
-  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/inventory-erik/rolebindings/default-view
-  uid: 960f7e5f-9602-4e3c-933f-df2692052361
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
