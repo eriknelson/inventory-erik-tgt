@@ -16,7 +16,7 @@ metadata:
   selfLink: /apis/extensions/v1beta1/namespaces/inventory-erik/ingresses/inventory
 spec:
   rules:
-  - host: inventory.inventory-erik.10.19.2.21.nip.io
+  - host: inventory.inventory-erik-tgt.10.19.2.21.nip.io
     http:
       paths:
       - backend:
