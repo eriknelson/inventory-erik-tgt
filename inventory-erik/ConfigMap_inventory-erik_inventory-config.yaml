@@ -30,29 +30,7 @@ metadata:
   annotations:
     meta.helm.sh/release-name: inventory
     meta.helm.sh/release-namespace: inventory-erik
-  creationTimestamp: "2021-08-31T16:59:37Z"
-  labels:
-    app.kubernetes.io/managed-by: Helm
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:data:
-        .: {}
-        f:application.yaml: {}
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:meta.helm.sh/release-name: {}
-          f:meta.helm.sh/release-namespace: {}
-        f:labels:
-          .: {}
-          f:app.kubernetes.io/managed-by: {}
-    manager: helm
-    operation: Update
-    time: "2021-08-31T16:59:37Z"
+  labels: {}
   name: inventory-config
   namespace: inventory-erik-tgt
-  resourceVersion: "50016329"
   selfLink: /api/v1/namespaces/inventory-erik/configmaps/inventory-config
-  uid: 84976879-ceab-46d2-90f4-ed0f6723bfee

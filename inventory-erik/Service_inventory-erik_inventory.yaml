@@ -5,46 +5,11 @@ metadata:
     description: The web server's http port
     meta.helm.sh/release-name: inventory
     meta.helm.sh/release-namespace: inventory-erik
-  creationTimestamp: "2021-08-31T16:59:37Z"
   labels:
     app: inventory
-    app.kubernetes.io/managed-by: Helm
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:description: {}
-          f:meta.helm.sh/release-name: {}
-          f:meta.helm.sh/release-namespace: {}
-        f:labels:
-          .: {}
-          f:app: {}
-          f:app.kubernetes.io/managed-by: {}
-      f:spec:
-        f:ports:
-          .: {}
-          k:{"port":8080,"protocol":"TCP"}:
-            .: {}
-            f:name: {}
-            f:port: {}
-            f:protocol: {}
-            f:targetPort: {}
-        f:selector:
-          .: {}
-          f:deployment: {}
-        f:sessionAffinity: {}
-        f:type: {}
-    manager: helm
-    operation: Update
-    time: "2021-08-31T16:59:37Z"
   name: inventory
   namespace: inventory-erik-tgt
-  resourceVersion: "50016335"
   selfLink: /api/v1/namespaces/inventory-erik/services/inventory
-  uid: d743e23c-e7e8-480d-abf8-b4572174a51e
 spec:
   ports:
   - name: web
