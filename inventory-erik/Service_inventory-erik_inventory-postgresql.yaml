@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: inventory
+    meta.helm.sh/release-namespace: inventory-erik
+  creationTimestamp: "2021-08-31T16:59:37Z"
+  labels:
+    app.kubernetes.io/instance: inventory
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: postgresql
+    helm.sh/chart: postgresql-10.9.2
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":5432,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/name: {}
+          f:role: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: helm
+    operation: Update
+    time: "2021-08-31T16:59:37Z"
+  name: inventory-postgresql
+  namespace: inventory-erik-tgt
+  resourceVersion: "50016340"
+  selfLink: /api/v1/namespaces/inventory-erik/services/inventory-postgresql
+  uid: 15137a02-247b-428d-b89e-ee5e0918580d
+spec:
+  ports:
+  - name: tcp-postgresql
+    port: 5432
+    protocol: TCP
+    targetPort: tcp-postgresql
+  selector:
+    app.kubernetes.io/instance: inventory
+    app.kubernetes.io/name: postgresql
+    role: primary
+  sessionAffinity: None
+  type: ClusterIP

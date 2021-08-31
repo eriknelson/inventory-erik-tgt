@@ -1,0 +1,61 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: haproxy
+    meta.helm.sh/release-name: inventory
+    meta.helm.sh/release-namespace: inventory-erik
+  creationTimestamp: "2021-08-31T16:59:37Z"
+  generation: 1
+  labels:
+    app: inventory
+    app.kubernetes.io/managed-by: Helm
+    chart: java-backend-0.1.0
+    heritage: Helm
+    release: inventory
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/ingress.class: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:chart: {}
+          f:heritage: {}
+          f:release: {}
+      f:spec:
+        f:rules: {}
+    manager: helm
+    operation: Update
+    time: "2021-08-31T16:59:37Z"
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: haproxy-ingress-controller
+    operation: Update
+    time: "2021-08-31T16:59:38Z"
+  name: inventory
+  namespace: inventory-erik-tgt
+  resourceVersion: "50016387"
+  selfLink: /apis/extensions/v1beta1/namespaces/inventory-erik/ingresses/inventory
+  uid: 071d0259-00fb-433d-a887-22de24e5100a
+spec:
+  rules:
+  - host: inventory.inventory-erik.10.19.2.21.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: inventory
+          servicePort: 8080
+        path: /
+        pathType: Prefix
